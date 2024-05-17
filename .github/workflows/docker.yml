@@ -25,5 +25,8 @@ jobs:
     - name: Start docker containers
       run: |
           echo "VERSION=$(versioninfo)" >> $GITHUB_ENV
-          docker-compose -f docker-compose.yml up --build --detach --wait --wait-timeout 120 -e DIR="."
+          docker-compose -f docker-compose.yml up --build --detach -e DIR="."
           sleep 10  # wait for database to be ready
+
+    - name: Show containers
+      run: docker container ls
