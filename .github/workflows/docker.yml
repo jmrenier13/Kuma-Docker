@@ -22,13 +22,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
-    - name: Test
+    - name: Set env
       run: |
-        export NAME=.
-        echo $NAME
+        export DIR=.
 
     - name: Start docker containers
-      run: docker-compose up --wait --wait-timeout 120 --detach -e DIR="."
+      run: docker-compose up --wait --wait-timeout 120 --detach
 
     - name: Show containers
       run: docker container ls -a
