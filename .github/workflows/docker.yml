@@ -24,7 +24,7 @@ jobs:
 
     - name: Set env
       run: |
-        export DIR=.
+        echo "DIR=." >> $GITHUB_ENV
 
     - name: Start docker containers
       run: |
