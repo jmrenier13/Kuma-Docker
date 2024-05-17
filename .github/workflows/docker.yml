@@ -27,7 +27,7 @@ jobs:
         export DIR=.
 
     - name: Start docker containers
-      run: docker-compose up --wait --wait-timeout 120 --detach
+      run: docker compose up --wait --wait-timeout 120 --detach
 
     - name: Show containers
-      run: docker container ls -a
+      run: docker container ps
