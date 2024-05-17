@@ -27,7 +27,7 @@ jobs:
         docker-compose up --wait --wait-timeout 120 --detach -e DIR="."
         sleep 10
         docker container ls
-        docker ps
+        docker ps -a
 
     - name: Show containers
       run: docker container ls
