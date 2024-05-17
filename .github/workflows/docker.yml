@@ -23,7 +23,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Start docker containers
-      run: docker compose up --wait --wait-timeout 120 --detach --env DIR="."
+      run: docker compose up --wait --wait-timeout 120 --detach -e DIR="."
 
     - name: Show containers
       run: docker container ls -a
