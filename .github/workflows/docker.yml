@@ -27,9 +27,7 @@ jobs:
         echo "DIR=." >> $GITHUB_ENV
 
     - name: Start docker containers
-      run: |
-        echo $DIR
-        docker compose up --wait --wait-timeout 120 --detach
+      run: docker compose up --wait --wait-timeout 120 --detach
 
     - name: Show containers
       run: docker container ps
