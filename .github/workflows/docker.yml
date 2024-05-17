@@ -24,7 +24,7 @@ jobs:
 
     - name: Start docker containers
       run: |
-        docker compose run --wait --wait-timeout 120 --detach --env DIR="."
+        docker compose run --detach --env DIR="."
         sleep 10
         docker container ls
         docker ps -a
