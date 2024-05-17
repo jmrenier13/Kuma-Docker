@@ -24,7 +24,7 @@ jobs:
 
     - name: Start docker containers
       run: |
-        docker-compose up --wait --wait-timeout 120 --detach -e DIR="."
+        docker-compose up --wait --wait-timeout 120 --build --detach -e DIR="."
         sleep 10
         docker container ls
         docker ps -a
