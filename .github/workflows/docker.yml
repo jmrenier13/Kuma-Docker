@@ -7,6 +7,7 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -31,3 +32,11 @@ jobs:
 
     - name: Show containers
       run: docker container ps
+
+    - name: Networks
+      run: docker network ls
+
+    - name: Curl kuma
+      run: |
+        curl 0.0.0.0:3001 > curl_kuma_result
+        cat curl_kuma_result
