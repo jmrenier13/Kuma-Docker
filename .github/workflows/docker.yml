@@ -39,4 +39,4 @@ jobs:
     - name: Curl kuma
       run: |
         sudo curl 0.0.0.0:3001 > curl_kuma_result
-        cat curl_kuma_result
+        sudo cat curl_kuma_result
